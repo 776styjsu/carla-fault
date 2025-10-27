@@ -5,6 +5,11 @@ import os
 from typing import Dict, List, Optional, Any, Callable
 import logging
 
+try:
+    import carla
+except ImportError:
+    carla = None  # Will be checked when methods are called
+
 from ..utils.logging_utils import setup_logger
 
 
@@ -82,7 +87,8 @@ class SensorManager:
                 
                 # Get spawn transform relative to vehicle
                 spawn_point = sensor_config.get('spawn_point', {})
-                import carla
+                if carla is None:
+                    raise ImportError("carla module is not available")
                 transform = carla.Transform(
                     carla.Location(
                         x=spawn_point.get('x', 0.0),

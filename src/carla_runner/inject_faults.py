@@ -102,13 +102,13 @@ class FaultInjector:
             self.logger.error(f"Failed to inject fault '{fault_name}': {e}")
             return False
     
-    def remove_fault(self, fault_name: str, target: Any) -> bool:
+    def remove_fault(self, fault_name: str, target: Optional[Any] = None) -> bool:
         """
         Remove a fault from a target.
         
         Args:
             fault_name: Name of the fault to remove
-            target: Target object to remove fault from
+            target: Target object to remove fault from (can be None for cleanup)
             
         Returns:
             True if removed successfully, False otherwise
@@ -124,7 +124,12 @@ class FaultInjector:
         fault = self.faults[fault_name]
         
         try:
-            fault.remove(target)
+            if target is not None:
+                fault.remove(target)
+            else:
+                # Just deactivate without calling remove if no target provided
+                fault.deactivate()
+            
             self.active_faults.remove(fault_name)
             
             # Log removal
