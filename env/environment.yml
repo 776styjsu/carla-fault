@@ -1,0 +1,11 @@
+name: carla-fault-injection
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - numpy
+  - pyyaml
+  - pip
+  - pip:
+    - carla==0.9.13
