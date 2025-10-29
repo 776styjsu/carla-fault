@@ -4,7 +4,7 @@ inject_and_collect.py
 
 Connect to an already-running CARLA server (launched separately, e.g. via carla_server.sh),
 spawn an ego vehicle + sensors, inject a camera fault, optionally record RGB/depth (frames and/or MP4),
-drive with BasicAgent for a fixed duration, then clean up our actors.
+optionally log vehicle control/state each tick, drive with BasicAgent for a fixed duration, then clean up.
 """
 
 import argparse
@@ -14,6 +14,7 @@ import time
 import random
 import threading
 import queue
+import json
 from pathlib import Path
 from typing import Tuple, Optional
 
@@ -46,7 +47,7 @@ def parse_args():
     )
 
     p = argparse.ArgumentParser(
-        description="Spawn ego + sensors, inject fault, optionally save frames and/or MP4 video."
+        description="Spawn ego + sensors, inject fault, optionally save frames/MP4 and vehicle logs."
     )
     p.add_argument("--carla-root", type=Path, required=True,
                    help="Path to CARLA install root (contains CarlaUE4.sh and PythonAPI/).")
@@ -60,6 +61,9 @@ def parse_args():
     p.add_argument("--video-depth", action="store_true", help="Save depth video as MP4.")
     p.add_argument("--video-fps", type=float, default=None,
                    help="FPS for videos. Default: CARLA fixed delta if set, else 20.")
+    # Vehicle log
+    p.add_argument("--log-vehicle", action="store_true",
+                   help="Log vehicle control/state to out_dir/vehicle.jsonl (one row per tick).")
     p.add_argument("--fault-severity", type=float, default=0.8, help="Fault severity (0..1).")
     fault_help = "Fault to inject."
     if available_faults:
@@ -67,7 +71,7 @@ def parse_args():
     fault_help += f" Default: {default_fault}."
     p.add_argument("--fault", type=str, default=default_fault, help=fault_help)
     p.add_argument("--out-dir", type=Path, default=Path("out_debug"),
-                   help="Directory where captures (frames/videos) will be stored.")
+                   help="Directory where captures (frames/videos/logs) will be stored.")
     return p.parse_args()
 
 
@@ -121,6 +125,14 @@ def depth_bytes_to_numpy(raw_bytes: bytes, h: int, w: int) -> np.ndarray:
     return rgb_like
 
 
+def vec3_to_dict(v: carla.Vector3D):
+    return {"x": float(v.x), "y": float(v.y), "z": float(v.z)}
+
+
+def rot_to_dict(r: carla.Rotation):
+    return {"pitch": float(r.pitch), "yaw": float(r.yaw), "roll": float(r.roll)}
+
+
 # ---------------------- Video helpers ----------------------
 class LazyVideoWriter:
     """
@@ -138,7 +150,6 @@ class LazyVideoWriter:
     def _open(self, frame: np.ndarray):
         h, w = frame.shape[:2]
         self._size = (w, h)
-        # Prefer OpenCV
         if cv2 is not None:
             fourcc = cv2.VideoWriter_fourcc(*"mp4v")
             self._writer = cv2.VideoWriter(self.path, fourcc, self.fps, (w, h))
@@ -157,9 +168,7 @@ class LazyVideoWriter:
         if (frame_rgb.shape[1], frame_rgb.shape[0]) != self._size:
             raise ValueError("Frame size changed during recording.")
         if self._backend == "cv2":
-            # cv2 expects BGR
-            bgr = frame_rgb[:, :, ::-1]
-            self._writer.write(bgr)
+            self._writer.write(frame_rgb[:, :, ::-1])  # RGB->BGR
         else:
             self._writer.append_data(frame_rgb)
 
@@ -183,16 +192,17 @@ class LazyVideoWriter:
 
 
 # -------------------------------------------------
-# AsyncWriter for frames + videos (no drops)
+# AsyncWriter for frames + videos + vehicle logs (no drops)
 # -------------------------------------------------
 class AsyncWriter:
     """
-    - Unbounded queue: enqueue EVERY captured frame (no drops).
+    - Unbounded queue: enqueue EVERY captured item (no drops).
     - One worker thread drains the queue in arrival order.
-    - Can write PNG frames and/or append to MP4 videos.
+    - Can write PNG frames, append to MP4 videos, and append JSONL logs.
     """
     def __init__(self, out_dir: Path, save_rgb: bool, save_depth: bool,
-                 video_rgb: bool, video_depth: bool, video_fps: float):
+                 video_rgb: bool, video_depth: bool, video_fps: float,
+                 log_vehicle: bool):
         self.q = queue.Queue()
         self.stop_flag = False
 
@@ -205,12 +215,16 @@ class AsyncWriter:
         self.video_depth = video_depth
         self.video_fps = float(video_fps)
 
+        # vehicle logs
+        self.log_vehicle = log_vehicle
+
         # directories
         self.out_dir = out_dir
         self.clean_dir = out_dir / "clean_rgb"
         self.fault_dir = out_dir / "faulty_rgb"
         self.depth_dir = out_dir / "depth"
         self.video_dir = out_dir / "video"
+        self.log_path = out_dir / "vehicle.jsonl"
 
         if self.save_rgb:
             self.clean_dir.mkdir(parents=True, exist_ok=True)
@@ -219,11 +233,16 @@ class AsyncWriter:
             self.depth_dir.mkdir(parents=True, exist_ok=True)
         if self.video_rgb or self.video_depth:
             self.video_dir.mkdir(parents=True, exist_ok=True)
+        if self.log_vehicle:
+            self.out_dir.mkdir(parents=True, exist_ok=True)
 
         # lazy video writers
         self._vid_rgb_clean: Optional[LazyVideoWriter] = None
         self._vid_rgb_faulty: Optional[LazyVideoWriter] = None
         self._vid_depth: Optional[LazyVideoWriter] = None
+
+        # lazy log file handle
+        self._log_fp = None
 
         self.thread = threading.Thread(target=self._worker, daemon=True)
         self.thread.start()
@@ -235,6 +254,10 @@ class AsyncWriter:
         if self.video_depth and self._vid_depth is None and depth_rgb is not None:
             self._vid_depth = LazyVideoWriter(self.video_dir / "depth.mp4", self.video_fps)
 
+    def _ensure_log_file(self):
+        if self.log_vehicle and self._log_fp is None:
+            self._log_fp = open(self.log_path, "a", buffering=1)  # line-buffered
+
     def _worker(self):
         while True:
             try:
@@ -245,9 +268,9 @@ class AsyncWriter:
                 continue
 
             kind = item["kind"]
-            frame_id = item["frame_id"]
 
             if kind == "rgb_pair":
+                frame_id = item["frame_id"]
                 clean_arr = item["clean"]    # RGB uint8
                 faulty_arr = item["faulty"]  # RGB uint8
 
@@ -263,7 +286,7 @@ class AsyncWriter:
                     self._vid_rgb_faulty.write_rgb(faulty_arr)
 
             elif kind == "depth":
-                # reconstruct RGB-like view first
+                frame_id = item["frame_id"]
                 depth_arr = depth_bytes_to_numpy(item["raw_bytes"], item["h"], item["w"])
 
                 if self.save_depth:
@@ -273,6 +296,11 @@ class AsyncWriter:
                     self._ensure_video_writers(depth_rgb=depth_arr)
                     self._vid_depth.write_rgb(depth_arr)
 
+            elif kind == "veh_log":
+                self._ensure_log_file()
+                # Write a compact JSON line
+                self._log_fp.write(json.dumps(item["record"], separators=(",", ":")) + "\n")
+
             self.q.task_done()
 
     def enqueue_rgb_pair(self, frame_id: int, clean_arr: np.ndarray, faulty_arr: np.ndarray):
@@ -281,6 +309,10 @@ class AsyncWriter:
     def enqueue_depth_raw(self, frame_id: int, h: int, w: int, raw_bytes: bytes):
         self.q.put({"kind": "depth", "frame_id": frame_id, "h": h, "w": w, "raw_bytes": raw_bytes})
 
+    def enqueue_vehicle_record(self, record: dict):
+        if self.log_vehicle:
+            self.q.put({"kind": "veh_log", "record": record})
+
     def shutdown(self):
         self.stop_flag = True
         self.thread.join()
@@ -288,6 +320,10 @@ class AsyncWriter:
         if self._vid_rgb_clean: self._vid_rgb_clean.close()
         if self._vid_rgb_faulty: self._vid_rgb_faulty.close()
         if self._vid_depth: self._vid_depth.close()
+        # close log fp
+        if self._log_fp:
+            self._log_fp.close()
+            self._log_fp = None
 
 
 # -------------------------------------------------
@@ -341,7 +377,7 @@ def main():
     fault = create_fault(args.fault, severity=args.fault_severity)
     injector.register_fault(fault)
 
-    # Async writer for frames + videos
+    # Async writer for frames + videos + logs
     writer = AsyncWriter(
         out_dir=args.out_dir,
         save_rgb=args.save_rgb,
@@ -349,6 +385,7 @@ def main():
         video_rgb=args.video_rgb,
         video_depth=args.video_depth,
         video_fps=video_fps,
+        log_vehicle=args.log_vehicle,
     )
 
     listener_active = True
@@ -388,22 +425,73 @@ def main():
     except TypeError:
         agent.set_destination(vehicle.get_location(), dest_tf.location)
 
+    current_goal = dest_tf.location  # keep for logging
     spectator = world.get_spectator()
 
     try:
         t0 = time.time()
         while time.time() - t0 < args.time:
+            # Closed-loop step
             control = agent.run_step()
             vehicle.apply_control(control)
-            spectator.set_transform(rgb_cam.get_transform())
-            world.wait_for_tick()
 
+            # Step world and get snapshot for consistent frame/timestamp
+            snapshot = world.wait_for_tick()
+            ts = snapshot.timestamp
+
+            # Update goal if agent reports done()
             if hasattr(agent, "done") and agent.done():
                 new_tf = random.choice(spawn_points)
                 try:
                     agent.set_destination(new_tf.location)
                 except TypeError:
                     agent.set_destination(vehicle.get_location(), new_tf.location)
+                current_goal = new_tf.location
+
+            # Move spectator (optional)
+            spectator.set_transform(rgb_cam.get_transform())
+
+            # -------- Vehicle log (per tick) --------
+            if args.log_vehicle:
+                tf = vehicle.get_transform()
+                vel = vehicle.get_velocity()
+                ang = vehicle.get_angular_velocity()
+                acc = vehicle.get_acceleration()
+                speed_mps = float(np.sqrt(vel.x**2 + vel.y**2 + vel.z**2))
+                record = {
+                    "frame": int(snapshot.frame),
+                    "timestamp": {
+                        "delta_seconds": float(ts.delta_seconds),
+                        "elapsed_seconds": float(getattr(ts, "elapsed_seconds", 0.0)),
+                    },
+                    "control": {
+                        "throttle": float(control.throttle),
+                        "steer": float(control.steer),
+                        "brake": float(control.brake),
+                        "hand_brake": bool(control.hand_brake),
+                        "reverse": bool(control.reverse),
+                        "manual_gear_shift": bool(control.manual_gear_shift),
+                        "gear": int(control.gear),
+                    },
+                    "transform": {
+                        "location": {"x": float(tf.location.x), "y": float(tf.location.y), "z": float(tf.location.z)},
+                        "rotation": rot_to_dict(tf.rotation),
+                    },
+                    "velocity": vec3_to_dict(vel),
+                    "angular_velocity": vec3_to_dict(ang),
+                    "acceleration": vec3_to_dict(acc),
+                    "speed_mps": speed_mps,
+                    "speed_kph": speed_mps * 3.6,
+                    "goal": {"x": float(current_goal.x), "y": float(current_goal.y), "z": float(current_goal.z)},
+                    "fault": {"name": fault.name, "severity": float(getattr(fault, "severity", 0.0))},
+                    "capture_flags": {
+                        "save_rgb": bool(args.save_rgb),
+                        "save_depth": bool(args.save_depth),
+                        "video_rgb": bool(args.video_rgb),
+                        "video_depth": bool(args.video_depth),
+                    },
+                }
+                writer.enqueue_vehicle_record(record)
 
     finally:
         listener_active = False
