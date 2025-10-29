@@ -2,12 +2,11 @@
 
 import subprocess
 import time
-import logging
 from typing import Optional
 import os
 import signal
 
-from ..utils.logging_utils import setup_logger
+from utils.logging_utils import setup_logger
 
 
 class CarlaLauncher:
@@ -17,7 +16,8 @@ class CarlaLauncher:
     
     def __init__(
         self,
-        carla_path: str = "/opt/carla-simulator",
+        # carla_path: str = "/opt/carla-simulator",
+        carla_path: str = "/home/yutia000/Work/Research/Tools/carla-0.9.15/",
         port: int = 2000,
         quality_level: str = "Low"
     ):
@@ -53,7 +53,7 @@ class CarlaLauncher:
         
         cmd = [
             carla_exec,
-            "-RenderOffScreen",
+            # "-RenderOffScreen",
             f"-carla-rpc-port={self.port}",
             f"-quality-level={self.quality_level}"
         ]

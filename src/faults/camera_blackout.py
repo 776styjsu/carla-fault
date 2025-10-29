@@ -1,6 +1,6 @@
 """Camera blackout fault implementation."""
 
-from typing import Any, Optional
+from typing import Any
 import numpy as np
 from .base_fault import BaseFault
 
@@ -11,6 +11,8 @@ class CameraBlackoutFault(BaseFault):
     
     When injected, this fault will cause the camera to output black frames.
     """
+
+    fault_name = "camera_blackout"
     
     def __init__(self, name: str = "camera_blackout", severity: float = 1.0):
         """

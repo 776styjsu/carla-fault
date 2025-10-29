@@ -1,16 +1,14 @@
 """Sensor manager module."""
 
 import yaml
-import os
 from typing import Dict, List, Optional, Any, Callable
-import logging
 
 try:
     import carla
 except ImportError:
-    carla = None  # Will be checked when methods are called
+    carla = None
 
-from ..utils.logging_utils import setup_logger
+from utils.logging_utils import setup_logger
 
 
 class SensorManager:

@@ -1,11 +1,10 @@
 """Fault injection orchestration module."""
 
 from typing import Dict, List, Optional, Any
-import logging
 import time
 
-from ..faults.base_fault import BaseFault
-from ..utils.logging_utils import setup_logger
+from faults.base_fault import BaseFault
+from utils.logging_utils import setup_logger
 
 
 class FaultInjector:

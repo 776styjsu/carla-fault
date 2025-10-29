@@ -1,10 +1,9 @@
 """Ego vehicle spawning module."""
 
 import random
-from typing import Optional, Tuple
-import logging
+from typing import Optional
 
-from ..utils.logging_utils import setup_logger
+from utils.logging_utils import setup_logger
 
 
 class EgoSpawner:

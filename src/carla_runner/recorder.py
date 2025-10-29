@@ -3,10 +3,9 @@
 import os
 import time
 from typing import Optional, Dict, Any
-import logging
 import json
 
-from ..utils.logging_utils import setup_logger
+from utils.logging_utils import setup_logger
 
 
 class DataRecorder:
