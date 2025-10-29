@@ -6,8 +6,11 @@ dependencies:
   - python=3.8
   - numpy
   - pyyaml
-  - pip
+  - pillow
+  - imageio
+  - imageio-ffmpeg
   - shapely
   - networkx
+  - pip
   - pip:
-    - carla==0.9.15
+      - carla==0.9.15
