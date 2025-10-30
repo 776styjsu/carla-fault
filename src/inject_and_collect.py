@@ -21,13 +21,12 @@ from typing import Tuple, Optional
 import numpy as np
 from PIL import Image
 
-# Optional video backends
 try:
-    import cv2  # type: ignore
+    import cv2
 except Exception:
-    cv2 = None  # fallback to imageio
+    cv2 = None
 try:
-    import imageio  # type: ignore
+    import imageio
 except Exception:
     imageio = None
 

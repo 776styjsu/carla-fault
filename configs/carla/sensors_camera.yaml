@@ -9,8 +9,8 @@ sensors:
       yaw: 0.0
       roll: 0.0
     attributes:
-      image_size_x: 1920
-      image_size_y: 1080
+      image_size_x: 320
+      image_size_y: 180
       fov: 110
       sensor_tick: 0.0
     
@@ -24,7 +24,7 @@ sensors:
       yaw: 0.0
       roll: 0.0
     attributes:
-      image_size_x: 1920
-      image_size_y: 1080
+      image_size_x: 320
+      image_size_y: 180
       fov: 110
       sensor_tick: 0.0
