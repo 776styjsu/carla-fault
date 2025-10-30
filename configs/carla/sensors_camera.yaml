@@ -1,0 +1,30 @@
+sensors:
+  camera_rgb:
+    type: sensor.camera.rgb
+    spawn_point:
+      x: 2.5
+      y: 0.0
+      z: 1.0
+      pitch: 0.0
+      yaw: 0.0
+      roll: 0.0
+    attributes:
+      image_size_x: 320
+      image_size_y: 180
+      fov: 110
+      sensor_tick: 0.0
+    
+  camera_depth:
+    type: sensor.camera.depth
+    spawn_point:
+      x: 2.5
+      y: 0.0
+      z: 1.0
+      pitch: 0.0
+      yaw: 0.0
+      roll: 0.0
+    attributes:
+      image_size_x: 320
+      image_size_y: 180
+      fov: 110
+      sensor_tick: 0.0
