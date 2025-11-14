@@ -371,6 +371,10 @@ def main():
     rgb_cam = sensor_mgr.get_sensor("camera_rgb")
     depth_cam = sensor_mgr.get_sensor("camera_depth")
 
+    collision_sensor_bp = world.get_blueprint_library().find('sensor.other.collision')
+    collision_sensor = world.spawn_actor(collision_sensor_bp, carla.Transform(), attach_to=vehicle)
+    collision_events=[]
+
     # Prepare fault injector
     injector = FaultInjector()
     fault = create_fault(args.fault, severity=args.fault_severity)
@@ -408,9 +412,31 @@ def main():
         frame_id = img.frame
         writer.enqueue_depth_raw(frame_id=frame_id, h=img.height, w=img.width, raw_bytes=bytes(img.raw_data))
 
+    def collision_callback(event):
+        actor = event.other_actor
+        impulse = event.normal_impulse
+        loc = event.transform.location
+
+        collision_events.append({
+           "frame": event.frame,
+           "timestamp": world.get_snapshot().timestamp.elapsed_seconds,
+           "other_actor": actor.type_id,
+           "location": {
+               "x": loc.x,
+               "y": loc.y,
+               "z": loc.z
+           },
+           "impulse": {
+               "x": impulse.x,
+               "y": impulse.y,
+               "z": impulse.z
+           }
+        })
+
     # Register callbacks BEFORE injecting
     rgb_cam.listen(rgb_callback)
     depth_cam.listen(depth_callback)
+    collision_sensor.listen(collision_callback)
 
     # Mark that the RGB cam is faulted via injector metadata
     injector.inject_fault(fault.name, rgb_cam)
@@ -457,6 +483,20 @@ def main():
                 ang = vehicle.get_angular_velocity()
                 acc = vehicle.get_acceleration()
                 speed_mps = float(np.sqrt(vel.x**2 + vel.y**2 + vel.z**2))
+                loc = vehicle.get_location()
+                speed_limit_kph = vehicle.get_speed_limit()
+                wp = world.get_map().get_waypoint(loc, project_to_road=True, lane_type=carla.LaneType.Driving)
+                lane_deviation_m = loc.distance(wp.transform.location)
+               # agent_route = agent.get_local_planner().waypoints_queue
+               # if agent_route:
+               #     next_wp, _ = agent_route[0]
+               #     route_deviation_m = loc.distance(next_wp.transform.location)
+               # else:
+               #    route_deviation = 0.0
+                collisions_this_frame = [
+                    c for c in collision_events if c["frame"] == snapshot.frame
+                ]
+
                 record = {
                     "frame": int(snapshot.frame),
                     "timestamp": {
@@ -481,7 +521,12 @@ def main():
                     "acceleration": vec3_to_dict(acc),
                     "speed_mps": speed_mps,
                     "speed_kph": speed_mps * 3.6,
-                    "goal": {"x": float(current_goal.x), "y": float(current_goal.y), "z": float(current_goal.z)},
+                    "speed_limit_kph" : speed_limit_kph,
+                    "collisions_this_frame": collisions_this_frame,
+                    "lane_deviation_m": lane_deviation_m,
+                    "lane_width": wp.lane_width,
+                    #"route_deviation_m": route_deviation,	  
+		    "goal": {"x": float(current_goal.x), "y": float(current_goal.y), "z": float(current_goal.z)},
                     "fault": {"name": fault.name, "severity": float(getattr(fault, "severity", 0.0))},
                     "capture_flags": {
                         "save_rgb": bool(args.save_rgb),
@@ -491,6 +536,9 @@ def main():
                     },
                 }
                 writer.enqueue_vehicle_record(record)
+                collision_events = [
+                  c for c in collision_events if c["frame"] > snapshot.frame
+                ]
 
     finally:
         listener_active = False
