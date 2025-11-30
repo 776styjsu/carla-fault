@@ -542,8 +542,10 @@ def main():
 
     finally:
         listener_active = False
-        rgb_cam.stop()
-        depth_cam.stop()
+        
+        if collision_sensor:
+            collision_sensor.stop()
+            collision_sensor.destroy()
 
         sensor_mgr.destroy_sensors()
         try:
