@@ -6,7 +6,7 @@ from typing import Optional
 import os
 import signal
 
-from utils.logging_utils import setup_logger
+from carla_utils.logging_utils import setup_logger
 
 
 class CarlaLauncher:
