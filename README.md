@@ -12,8 +12,8 @@ This toolkit supports reproducible fault-injection experiments inside CARLA. The
 - Includes helpers for launching/shutting down the CARLA server (`src/carla_server.sh`).
 
 ## Project Structure
-- `src/inject_and_collect.py` – main entry point for standard closed-loop runs (manual or simple agents).
-- `src/inject_and_collect_pcla.py` – entry point for running PCLA agents (SimLingo, TransFuser, etc.) with fault injection.
+- `src/inject_and_collect_pcla.py` – **Main entry point** for running PCLA agents (SimLingo, TransFuser, etc.) with fault injection.
+- `src/inject_and_collect.py` – Legacy entry point for standard closed-loop runs (manual or simple agents).
 - `src/carla_runner/` – wrappers for spawning vehicles, managing sensors, launching CARLA, and orchestrating faults.
 - `src/faults/` – fault base class plus concrete fault implementations. New faults dropped here are auto-discovered.
 - `configs/` – YAML sensor layouts (e.g., RGB and depth cameras mounted on the ego vehicle).
@@ -63,43 +63,16 @@ cd src
 ./carla_server.sh stop
 ```
 
-Alternatively, launch CARLA manually and ensure it listens on the port you pass to the runner script.
-
-## Running an Experiment
-The recommended entry point is `inject_and_collect.py` (superset of the older `main.py`). Example:
+**Note:** Starting the CARLA server via the script can sometimes be inconsistent. It is **recommended to launch CARLA manually** in a separate terminal and ensure it listens on the port you pass to the runner script (default 2000).
 
 ```bash
-cd src
-python inject_and_collect.py \
-	--carla-root "$CARLA_ROOT" \
-	--port 2000 \
-	--time 120 \
-	--fault camera_blackout \
-	--fault-severity 0.8 \
-	--save-rgb \
-	--video-rgb \
-	--log-vehicle \
-	--out-dir ../out_debug/session_001
+# In a separate terminal
+cd $CARLA_ROOT
+./CarlaUE4.sh -carla-rpc-port=2000
 ```
 
-Key CLI options:
-- `--fault <name>` – choose which fault to inject. Names are case-insensitive and accept variations like `camera_blackout` or the fully qualified class path (`faults.camera_blackout.CameraBlackoutFault`). Use `--help` to see the auto-generated list of available faults.
-- `--fault-severity` – float in `[0,1]` passed to the selected fault implementation.
-- `--save-rgb/--save-depth` – store per-frame PNG dumps (clean vs. faulty RGB, and depth buffers).
-- `--video-rgb/--video-depth` – emit MP4s using OpenCV or imageio (falls back automatically).
-- `--log-vehicle` – record one JSON line per tick with control commands, transforms, and velocity.
-- `--time` – run duration in seconds before clean shutdown.
-
-Output directory structure (created on demand):
-- `clean_rgb/` and `faulty_rgb/` – frame-by-frame PNGs.
-- `depth/` – PNG depth visualizations.
-- `video/` – MP4s (`rgb_clean.mp4`, `rgb_faulty.mp4`, `depth.mp4`).
-- `vehicle.jsonl` – vehicle telemetry log (when `--log-vehicle` is set).
-
-The async writer backend guarantees every frame/log is enqueued; shutdown waits for the queue to drain before exiting.
-
-## Running with PCLA Agents
-To evaluate state-of-the-art agents (like TransFuser, SimLingo, etc.) with fault injection, use `src/inject_and_collect_pcla.py`. This script wraps the PCLA framework and injects faults into the sensor stream before the agent sees it.
+## Running an Experiment
+The primary entry point is `inject_and_collect_pcla.py`. This script wraps the PCLA framework to evaluate state-of-the-art agents (like TransFuser, SimLingo, etc.) with fault injection.
 
 ```bash
 cd src
@@ -116,12 +89,40 @@ python inject_and_collect_pcla.py \
 	--out-dir ../out_debug_pcla/session_001
 ```
 
-**Key PCLA-specific options:**
+Key CLI options:
 - `--agent <name>` – The PCLA agent ID (e.g., `tf_tf`, `interfuser`, `simlingo_simlingo`). See `external/PCLA/README.md` for the full list.
+- `--fault <name>` – choose which fault to inject (e.g., `camera_blackout`).
+- `--fault-severity` – float in `[0,1]`.
+- `--save-rgb/--save-depth` – store per-frame PNG dumps.
+- `--video-rgb/--video-depth` – emit MP4s.
+- `--log-vehicle` – record vehicle telemetry.
+- `--sync` – Forces synchronous mode (default: True), recommended for PCLA.
 - `--route-file <path>` – Path to save/load the generated route XML (default: `temp_route.xml`).
-- `--sync` – Forces synchronous mode (default: True), which is highly recommended for PCLA agents to ensure deterministic execution.
 
-The output structure is identical to the standard runner (`clean_rgb`, `faulty_rgb`, `video`, `vehicle.jsonl`).
+Output directory structure:
+- `clean_rgb/` and `faulty_rgb/` – frame-by-frame PNGs.
+- `depth/` – PNG depth visualizations.
+- `video/` – MP4s (`rgb_clean.mp4`, `rgb_faulty.mp4`, `depth.mp4`).
+- `vehicle.jsonl` – vehicle telemetry log.
+
+The async writer backend guarantees every frame/log is enqueued; shutdown waits for the queue to drain before exiting.
+
+## Running with Basic Agents (Legacy)
+For simple agents (BasicAgent) or manual control without the PCLA framework, use `inject_and_collect.py`.
+
+```bash
+cd src
+python inject_and_collect.py \
+	--carla-root "$CARLA_ROOT" \
+	--port 2000 \
+	--time 120 \
+	--fault camera_blackout \
+	--fault-severity 0.8 \
+	--save-rgb \
+	--video-rgb \
+	--log-vehicle \
+	--out-dir ../out_debug/session_001
+```
 
 ## Implementing New Faults
 1. Create a new file in `src/faults/` (e.g., `thermal_noise.py`).
