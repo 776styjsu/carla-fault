@@ -12,11 +12,13 @@ This toolkit supports reproducible fault-injection experiments inside CARLA. The
 - Includes helpers for launching/shutting down the CARLA server (`src/carla_server.sh`).
 
 ## Project Structure
-- `src/inject_and_collect.py` – main entry point for closed-loop runs, recording, and fault injection.
+- `src/inject_and_collect.py` – main entry point for standard closed-loop runs (manual or simple agents).
+- `src/inject_and_collect_pcla.py` – entry point for running PCLA agents (SimLingo, TransFuser, etc.) with fault injection.
 - `src/carla_runner/` – wrappers for spawning vehicles, managing sensors, launching CARLA, and orchestrating faults.
 - `src/faults/` – fault base class plus concrete fault implementations. New faults dropped here are auto-discovered.
 - `configs/` – YAML sensor layouts (e.g., RGB and depth cameras mounted on the ego vehicle).
-- `env/environment.yml` – conda environment spec with CARLA Python API and required Python packages.
+- `env/environment.yml` – conda environment spec with CARLA Python API, PCLA dependencies, and required Python packages.
+- `external/PCLA/` – submodule containing the PCLA framework and agent implementations.
 
 ## Prerequisites
 - CARLA simulator installation (e.g., `/opt/carla-0.9.15`).
@@ -28,10 +30,28 @@ This toolkit supports reproducible fault-injection experiments inside CARLA. The
 ```bash
 conda env create -f env/environment.yml
 conda activate carla-fault-injection
-export CARLA_ROOT=/path/to/carla-0.9.15  # used by carla_server.sh and CLI
+export CARLA_ROOT=/path/to/carla-0.9.15  # optional, used by carla_server.sh and CLI
+git submodule update --init --recursive  # initialize PCLA
 ```
 
-If you plan to save MP4 videos, ensure either `opencv-python` or `imageio[ffmpeg]` is installed in the environment (already included in `environment.yml`).
+**Note on PCLA Dependencies:**
+The `environment.yml` includes dependencies for PCLA agents. However, `torch-scatter` is pinned to a specific CUDA version. If you encounter issues, you may need to reinstall it matching your CUDA version:
+```bash
+pip uninstall torch-scatter
+pip install torch-scatter -f https://data.pyg.org/whl/torch-2.2.0+cu121.html  # Adjust for your torch/cuda version
+```
+
+**PCLA Model Weights:**
+To use PCLA agents, you must download their pre-trained weights:
+```bash
+cd external/PCLA
+python download_weights.py
+# Or manually download from Hugging Face as described in external/PCLA/README.md
+cd ../..
+```
+
+**LMDrive Agent Setup:**
+If you plan to use the `LMDrive` agent, additional setup steps are required (uninstalling `timm`, setting up `vision_encoder` and `LAVIS`). Please refer to `external/PCLA/README.md` for details.
 
 ## Running the Simulator
 Use the helper script to start/stop CARLA. It records the server PID in `src/.carla_server.pid` for easy shutdown.
@@ -77,6 +97,31 @@ Output directory structure (created on demand):
 - `vehicle.jsonl` – vehicle telemetry log (when `--log-vehicle` is set).
 
 The async writer backend guarantees every frame/log is enqueued; shutdown waits for the queue to drain before exiting.
+
+## Running with PCLA Agents
+To evaluate state-of-the-art agents (like TransFuser, SimLingo, etc.) with fault injection, use `src/inject_and_collect_pcla.py`. This script wraps the PCLA framework and injects faults into the sensor stream before the agent sees it.
+
+```bash
+cd src
+python inject_and_collect_pcla.py \
+	--carla-root "$CARLA_ROOT" \
+	--port 2000 \
+	--time 60 \
+	--agent tf_tf \
+	--fault camera_blackout \
+	--fault-severity 1.0 \
+	--save-rgb \
+	--video-rgb \
+	--log-vehicle \
+	--out-dir ../out_debug_pcla/session_001
+```
+
+**Key PCLA-specific options:**
+- `--agent <name>` – The PCLA agent ID (e.g., `tf_tf`, `interfuser`, `simlingo_simlingo`). See `external/PCLA/README.md` for the full list.
+- `--route-file <path>` – Path to save/load the generated route XML (default: `temp_route.xml`).
+- `--sync` – Forces synchronous mode (default: True), which is highly recommended for PCLA agents to ensure deterministic execution.
+
+The output structure is identical to the standard runner (`clean_rgb`, `faulty_rgb`, `video`, `vehicle.jsonl`).
 
 ## Implementing New Faults
 1. Create a new file in `src/faults/` (e.g., `thermal_noise.py`).
