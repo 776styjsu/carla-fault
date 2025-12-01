@@ -51,7 +51,6 @@ from faults import create_fault, list_available_faults
 class GlobalFaultRegistry:
     current_fault = None
     writer = None
-    rgb_queue = None
     sync_mode = False
 
 
@@ -89,13 +88,9 @@ try:
                 bgr_faulty = rgb_faulty[:, :, ::-1]
                 array[:, :, :3] = bgr_faulty
 
-                # Record if this is the main camera and writer is available
-                # We assume 'rgb_front' or 'Center' is the main camera
-                if tag in ['rgb_front', 'Center', 'RGB', 'rgb_0'] and GlobalFaultRegistry.writer:
-                    if GlobalFaultRegistry.sync_mode and GlobalFaultRegistry.rgb_queue:
-                        GlobalFaultRegistry.rgb_queue.put({"frame": image.frame, "clean": rgb, "faulty": rgb_faulty})
-                    else:
-                        GlobalFaultRegistry.writer.enqueue_rgb_pair(image.frame, rgb, rgb_faulty)
+                # Record if writer is available
+                if GlobalFaultRegistry.writer:
+                    GlobalFaultRegistry.writer.enqueue_rgb_pair(image.frame, rgb, rgb_faulty, tag)
             
             self._data_provider.update_sensor(tag, array, image.frame)
 
@@ -209,7 +204,7 @@ def rot_to_dict(r: carla.Rotation):
 
 def get_image_for_frame(q: queue.Queue, frame_id: int, timeout: float = 2.0) -> Tuple[np.ndarray, np.ndarray]:
     """
-    Block until we receive the camera image matching the given simulator frame id.
+    DEPRECATED: Block until we receive the camera image matching the given simulator frame id.
     Returns (clean_rgb, faulty_rgb).
     """
     deadline = time.time() + timeout
@@ -244,6 +239,9 @@ class LazyVideoWriter:
     def _open(self, frame: np.ndarray):
         h, w = frame.shape[:2]
         self._size = (w, h)
+        
+        # Ensure directory exists
+        Path(self.path).parent.mkdir(parents=True, exist_ok=True)
         
         # Decide backend
         if self.backend_pref == "ffmpeg":
@@ -419,8 +417,8 @@ class AsyncWriter:
             self.out_dir.mkdir(parents=True, exist_ok=True)
 
         # lazy video writers
-        self._vid_rgb_clean: Optional[LazyVideoWriter] = None
-        self._vid_rgb_faulty: Optional[LazyVideoWriter] = None
+        # Map tag -> {'clean': LazyVideoWriter, 'faulty': LazyVideoWriter}
+        self._vid_writers = {}
         self._vid_depth: Optional[LazyVideoWriter] = None
 
         # lazy log file handle
@@ -429,10 +427,16 @@ class AsyncWriter:
         self.thread = threading.Thread(target=self._worker, daemon=True)
         self.thread.start()
 
-    def _ensure_video_writers(self, frame_rgb: Optional[np.ndarray] = None, depth_rgb: Optional[np.ndarray] = None):
-        if self.video_rgb and self._vid_rgb_clean is None and frame_rgb is not None:
-            self._vid_rgb_clean = LazyVideoWriter(self.video_dir / "rgb_clean.mp4", self.video_fps, backend=self.video_backend)
-            self._vid_rgb_faulty = LazyVideoWriter(self.video_dir / "rgb_faulty.mp4", self.video_fps, backend=self.video_backend)
+    def _ensure_video_writers(self, tag: str, frame_rgb: Optional[np.ndarray] = None):
+        if self.video_rgb and tag not in self._vid_writers and frame_rgb is not None:
+            clean_path = self.video_dir / f"{tag}_clean.mp4"
+            faulty_path = self.video_dir / f"{tag}_faulty.mp4"
+            self._vid_writers[tag] = {
+                'clean': LazyVideoWriter(clean_path, self.video_fps, backend=self.video_backend),
+                'faulty': LazyVideoWriter(faulty_path, self.video_fps, backend=self.video_backend)
+            }
+            
+    def _ensure_depth_writer(self, depth_rgb: Optional[np.ndarray] = None):
         if self.video_depth and self._vid_depth is None and depth_rgb is not None:
             self._vid_depth = LazyVideoWriter(self.video_dir / "depth.mp4", self.video_fps, backend=self.video_backend)
 
@@ -455,17 +459,24 @@ class AsyncWriter:
                 frame_id = item["frame_id"]
                 clean_arr = item["clean"]    # RGB uint8
                 faulty_arr = item["faulty"]  # RGB uint8
+                tag = item.get("tag", "rgb_front")
 
                 # frames
                 if self.save_rgb:
-                    Image.fromarray(clean_arr).save(self.clean_dir / f"rgb_{frame_id:06d}.png")
-                    Image.fromarray(faulty_arr).save(self.fault_dir / f"rgb_{frame_id:06d}.png")
+                    # Create subdirectories for each tag if needed
+                    clean_tag_dir = self.clean_dir / tag
+                    faulty_tag_dir = self.fault_dir / tag
+                    clean_tag_dir.mkdir(exist_ok=True)
+                    faulty_tag_dir.mkdir(exist_ok=True)
+                    
+                    Image.fromarray(clean_arr).save(clean_tag_dir / f"rgb_{frame_id:06d}.png")
+                    Image.fromarray(faulty_arr).save(faulty_tag_dir / f"rgb_{frame_id:06d}.png")
 
                 # videos
                 if self.video_rgb:
-                    self._ensure_video_writers(frame_rgb=clean_arr)
-                    self._vid_rgb_clean.write_rgb(clean_arr)
-                    self._vid_rgb_faulty.write_rgb(faulty_arr)
+                    self._ensure_video_writers(tag, frame_rgb=clean_arr)
+                    self._vid_writers[tag]['clean'].write_rgb(clean_arr)
+                    self._vid_writers[tag]['faulty'].write_rgb(faulty_arr)
 
             elif kind == "depth":
                 frame_id = item["frame_id"]
@@ -475,7 +486,7 @@ class AsyncWriter:
                     Image.fromarray(depth_arr).save(self.depth_dir / f"depth_{frame_id:06d}.png")
 
                 if self.video_depth:
-                    self._ensure_video_writers(depth_rgb=depth_arr)
+                    self._ensure_depth_writer(depth_rgb=depth_arr)
                     self._vid_depth.write_rgb(depth_arr)
 
             elif kind == "veh_log":
@@ -485,8 +496,8 @@ class AsyncWriter:
 
             self.q.task_done()
 
-    def enqueue_rgb_pair(self, frame_id: int, clean_arr: np.ndarray, faulty_arr: np.ndarray):
-        self.q.put({"kind": "rgb_pair", "frame_id": frame_id, "clean": clean_arr, "faulty": faulty_arr})
+    def enqueue_rgb_pair(self, frame_id: int, clean_arr: np.ndarray, faulty_arr: np.ndarray, tag: str = "rgb_front"):
+        self.q.put({"kind": "rgb_pair", "frame_id": frame_id, "clean": clean_arr, "faulty": faulty_arr, "tag": tag})
 
     def enqueue_depth_raw(self, frame_id: int, h: int, w: int, raw_bytes: bytes):
         self.q.put({"kind": "depth", "frame_id": frame_id, "h": h, "w": w, "raw_bytes": raw_bytes})
@@ -519,8 +530,10 @@ class AsyncWriter:
 
         self.thread.join()
         # close video writers
-        if self._vid_rgb_clean: self._vid_rgb_clean.close()
-        if self._vid_rgb_faulty: self._vid_rgb_faulty.close()
+        for tag, writers in self._vid_writers.items():
+            writers['clean'].close()
+            writers['faulty'].close()
+        
         if self._vid_depth: self._vid_depth.close()
         # close log fp
         if self._log_fp:
@@ -619,8 +632,8 @@ def main():
     GlobalFaultRegistry.writer = writer
     
     # Queue for sync mode
-    rgb_queue = queue.Queue()
-    GlobalFaultRegistry.rgb_queue = rgb_queue
+    # rgb_queue = queue.Queue()
+    # GlobalFaultRegistry.rgb_queue = rgb_queue
 
     collision_sensor_bp = world.get_blueprint_library().find('sensor.other.collision')
     collision_sensor = world.spawn_actor(collision_sensor_bp, carla.Transform(), attach_to=vehicle)
@@ -771,12 +784,12 @@ def main():
                 snapshot = world.get_snapshot()
                 
                 # Retrieve the exact frame for this tick
-                if args.save_rgb or args.video_rgb:
-                    try:
-                        clean, faulty = get_image_for_frame(rgb_queue, frame_id)
-                        writer.enqueue_rgb_pair(frame_id, clean, faulty)
-                    except RuntimeError as e:
-                        print(f"[warn] {e}")
+                # if args.save_rgb or args.video_rgb:
+                #     try:
+                #         clean, faulty = get_image_for_frame(rgb_queue, frame_id)
+                #         writer.enqueue_rgb_pair(frame_id, clean, faulty)
+                #     except RuntimeError as e:
+                #         print(f"[warn] {e}")
             else:
                 snapshot = world.wait_for_tick()
             

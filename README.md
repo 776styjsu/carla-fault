@@ -45,7 +45,7 @@ pip install torch-scatter -f https://data.pyg.org/whl/torch-2.2.0+cu121.html  # 
 To use PCLA agents, you must download their pre-trained weights:
 ```bash
 cd external/PCLA
-python download_weights.py
+python pcla_functions/download_weights.py
 # Or manually download from Hugging Face as described in external/PCLA/README.md
 cd ../..
 ```
@@ -90,7 +90,7 @@ python inject_and_collect_pcla.py \
 ```
 
 Key CLI options:
-- `--agent <name>` – The PCLA agent ID (e.g., `tf_tf`, `interfuser`, `simlingo_simlingo`). See `external/PCLA/README.md` for the full list.
+- `--agent <name>` – The PCLA agent ID. Currently tested and working agents: `tf_tf` (TransFuser), `if_if` (InterFuser), and `simlingo_simlingo` (SimLingo). See `external/PCLA/README.md` for the full list.
 - `--fault <name>` – choose which fault to inject (e.g., `camera_blackout`).
 - `--fault-severity` – float in `[0,1]`.
 - `--save-rgb/--save-depth` – store per-frame PNG dumps.
