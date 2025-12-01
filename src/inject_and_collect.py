@@ -487,12 +487,6 @@ def main():
                 speed_limit_kph = vehicle.get_speed_limit()
                 wp = world.get_map().get_waypoint(loc, project_to_road=True, lane_type=carla.LaneType.Driving)
                 lane_deviation_m = loc.distance(wp.transform.location)
-               # agent_route = agent.get_local_planner().waypoints_queue
-               # if agent_route:
-               #     next_wp, _ = agent_route[0]
-               #     route_deviation_m = loc.distance(next_wp.transform.location)
-               # else:
-               #    route_deviation = 0.0
                 collisions_this_frame = [
                     c for c in collision_events if c["frame"] == snapshot.frame
                 ]
@@ -523,9 +517,13 @@ def main():
                     "speed_kph": speed_mps * 3.6,
                     "speed_limit_kph" : speed_limit_kph,
                     "collisions_this_frame": collisions_this_frame,
+                    "waypoint" : { 
+                        "x" : float(wp.transform.location.x),
+                        "y" : float(wp.transform.location.y),
+                        "z" : float(wp.transform.location.z),
+                    },
                     "lane_deviation_m": lane_deviation_m,
-                    "lane_width": wp.lane_width,
-                    #"route_deviation_m": route_deviation,	  
+                    "lane_width": wp.lane_width,	  
 		    "goal": {"x": float(current_goal.x), "y": float(current_goal.y), "z": float(current_goal.z)},
                     "fault": {"name": fault.name, "severity": float(getattr(fault, "severity", 0.0))},
                     "capture_flags": {
