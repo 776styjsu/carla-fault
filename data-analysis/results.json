@@ -1,0 +1,4955 @@
+{
+  "runs": [
+    {
+      "simulation_name": "simlingo",
+      "mttf_seconds": 31.741111584090525,
+      "mttr_seconds": 0.0,
+      "total_failures": 225,
+      "total_repairs": 0,
+      "collision_count": 224,
+      "lane_deviation_count": 0,
+      "speed_violation_count": 1,
+      "failures": [
+        {
+          "frame": 14725,
+          "type": "speed_violation",
+          "is_fatal": false,
+          "ttf_seconds": 1.750000026077032,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14770,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 4.000000059604645,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14775,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 4.250000063329935,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14780,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 4.500000067055225,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14785,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 4.750000070780516,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14790,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 5.000000074505806,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14795,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 5.250000078231096,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14800,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 5.500000081956387,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14805,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 5.750000085681677,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14810,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 6.000000089406967,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14815,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 6.2500000931322575,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14820,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 6.500000096857548,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14825,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 6.750000100582838,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14830,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 7.000000104308128,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14835,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 7.250000108033419,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14840,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 7.500000111758709,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14845,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 7.750000115483999,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14850,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 8.00000011920929,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14855,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 8.25000012293458,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14860,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 8.50000012665987,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14865,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 8.75000013038516,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14870,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 9.00000013411045,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14875,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 9.250000137835741,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14880,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 9.500000141561031,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14885,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 9.750000145286322,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14890,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 10.000000149011612,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14895,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 10.250000152736902,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14900,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 10.500000156462193,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14905,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 10.750000160187483,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14910,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 11.000000163912773,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14915,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 11.250000167638063,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14920,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 11.500000171363354,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14925,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 11.750000175088644,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14930,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 12.000000178813934,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14935,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 12.250000182539225,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14940,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 12.500000186264515,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14945,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 12.750000189989805,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14950,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 13.000000193715096,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14955,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 13.250000197440386,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14960,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 13.500000201165676,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14965,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 13.750000204890966,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14970,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 14.000000208616257,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14975,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 14.250000212341547,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14980,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 14.500000216066837,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14985,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 14.750000219792128,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14990,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 15.000000223517418,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 14995,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 15.250000227242708,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15000,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 15.500000230967999,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15005,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 15.750000234693289,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15010,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 16.00000023841858,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15015,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 16.25000024214387,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15020,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 16.50000024586916,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15025,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 16.75000024959445,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15030,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 17.00000025331974,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15035,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 17.25000025704503,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15040,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 17.50000026077032,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15045,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 17.75000026449561,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15050,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 18.0000002682209,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15055,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 18.250000271946192,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15060,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 18.500000275671482,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15065,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 18.750000279396772,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15070,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 19.000000283122063,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15075,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 19.250000286847353,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15080,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 19.500000290572643,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15085,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 19.750000294297934,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15090,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 20.000000298023224,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15095,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 20.250000301748514,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15100,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 20.500000305473804,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15105,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 20.750000309199095,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15110,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 21.000000312924385,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15115,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 21.250000316649675,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15120,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 21.500000320374966,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15125,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 21.750000324100256,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15130,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 22.000000327825546,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15135,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 22.250000331550837,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15140,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 22.500000335276127,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15145,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 22.750000339001417,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15150,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 23.000000342726707,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15155,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 23.250000346451998,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15160,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 23.500000350177288,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15165,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 23.75000035390258,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15170,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 24.00000035762787,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15175,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 24.25000036135316,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15180,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 24.50000036507845,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15185,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 24.75000036880374,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15190,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 25.00000037252903,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15195,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 25.25000037625432,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15200,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 25.50000037997961,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15205,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 25.7500003837049,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15210,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 26.00000038743019,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15215,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 26.25000039115548,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15220,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 26.50000039488077,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15225,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 26.750000398606062,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15230,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 27.000000402331352,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15235,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 27.250000406056643,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15240,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 27.500000409781933,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15245,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 27.750000413507223,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15250,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 28.000000417232513,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15255,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 28.250000420957804,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15260,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 28.500000424683094,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15265,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 28.750000428408384,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15270,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 29.000000432133675,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15275,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 29.250000435858965,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15280,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 29.500000439584255,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15285,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 29.750000443309546,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15290,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 30.000000447034836,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15295,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 30.250000450760126,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15300,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 30.500000454485416,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15305,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 30.750000458210707,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15310,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 31.000000461935997,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15315,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 31.250000465661287,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15320,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 31.500000469386578,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15325,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 31.750000473111868,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15330,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 32.00000047683716,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15335,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 32.25000048056245,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15340,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 32.50000048428774,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15345,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 32.75000048801303,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15350,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 33.00000049173832,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15355,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 33.25000049546361,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15360,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 33.5000004991889,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15365,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 33.75000050291419,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15370,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 34.00000050663948,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15375,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 34.25000051036477,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15380,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 34.50000051409006,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15385,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 34.75000051781535,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15390,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 35.00000052154064,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15395,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 35.25000052526593,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15400,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 35.50000052899122,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15405,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 35.75000053271651,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15410,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 36.0000005364418,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15415,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 36.25000054016709,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15420,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 36.500000543892384,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15425,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 36.750000547617674,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15430,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.000000551342964,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15435,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.250000555068254,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15440,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.500000558793545,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15445,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.750000562518835,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15450,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.000000566244125,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15455,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.250000569969416,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15460,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.500000573694706,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15465,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.750000577419996,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15470,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 39.00000058114529,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15475,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 39.25000058487058,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15480,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 39.50000058859587,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15485,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 39.75000059232116,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15490,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 40.00000059604645,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15495,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 40.25000059977174,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15500,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 40.50000060349703,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15505,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 40.75000060722232,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15510,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 41.00000061094761,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15515,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 41.2500006146729,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15520,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 41.50000061839819,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15525,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 41.75000062212348,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15530,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 42.00000062584877,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15535,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 42.25000062957406,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15540,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 42.50000063329935,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15545,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 42.75000063702464,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15550,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 43.00000064074993,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15555,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 43.25000064447522,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15560,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 43.50000064820051,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15565,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 43.7500006519258,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15570,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 44.00000065565109,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15575,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 44.25000065937638,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15580,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 44.50000066310167,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15585,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 44.75000066682696,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15590,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 45.000000670552254,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15595,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 45.250000674277544,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15600,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 45.500000678002834,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15605,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 45.750000681728125,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15610,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 46.000000685453415,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15615,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 46.250000689178705,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15620,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 46.500000692903996,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15625,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 46.750000696629286,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15630,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 47.000000700354576,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15635,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 47.250000704079866,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15640,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 47.50000070780516,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15645,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 47.75000071153045,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15650,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 48.00000071525574,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15655,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 48.25000071898103,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15660,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 48.50000072270632,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15665,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 48.75000072643161,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15670,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 49.0000007301569,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15675,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 49.25000073388219,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15680,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 49.50000073760748,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15685,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 49.75000074133277,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15690,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 50.00000074505806,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15695,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 50.25000074878335,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15700,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 50.50000075250864,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15705,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 50.75000075623393,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15710,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 51.00000075995922,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15715,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 51.25000076368451,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15720,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 51.5000007674098,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15725,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 51.75000077113509,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15730,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.00000077486038,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15735,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.25000077858567,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15740,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.50000078231096,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15745,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.75000078603625,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15750,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.00000078976154,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15755,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.250000793486834,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15760,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.500000797212124,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15765,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.750000800937414,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15770,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.000000804662704,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15775,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.250000808387995,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15780,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.500000812113285,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15785,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.750000815838575,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15790,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.000000819563866,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15795,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.250000823289156,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15800,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.500000827014446,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15805,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.75000083073974,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15810,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.00000083446503,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15815,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.25000083819032,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15820,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.50000084191561,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15825,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.7500008456409,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15830,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.00000084936619,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15835,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.25000085309148,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15840,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.50000085681677,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15845,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.75000086054206,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15850,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.00000086426735,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15855,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.25000086799264,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15860,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.50000087171793,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15865,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.75000087544322,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15870,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.00000087916851,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15875,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.2500008828938,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15880,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.50000088661909,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 15885,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.75000089034438,
+          "ttr_seconds": null,
+          "repair_frame": null
+        }
+      ],
+      "configuration": {
+        "waypoint_threshold_m": 1.0,
+        "speed_excess_mph": 1.0,
+        "speed_excess_kph": 1.60934,
+        "check_interval_frames": 5
+      }
+    },
+    {
+      "simulation_name": "basic",
+      "mttf_seconds": 51.746402072409786,
+      "mttr_seconds": 0.49448117593096363,
+      "total_failures": 9,
+      "total_repairs": 9,
+      "collision_count": 0,
+      "lane_deviation_count": 9,
+      "speed_violation_count": 0,
+      "failures": [
+        {
+          "frame": 13376,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 34.93817550688982,
+          "ttr_seconds": 0.6048219688236713,
+          "repair_frame": 13391
+        },
+        {
+          "frame": 13396,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 35.73270321637392,
+          "ttr_seconds": 0.6372554153203964,
+          "repair_frame": 13411
+        },
+        {
+          "frame": 13456,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 38.25258823111653,
+          "ttr_seconds": 0.5912194140255451,
+          "repair_frame": 13471
+        },
+        {
+          "frame": 13476,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 39.0495661534369,
+          "ttr_seconds": 0.5531617440283298,
+          "repair_frame": 13491
+        },
+        {
+          "frame": 14131,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 62.44637889042497,
+          "ttr_seconds": 0.41448377445340157,
+          "repair_frame": 14146
+        },
+        {
+          "frame": 14151,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 63.00105517730117,
+          "ttr_seconds": 0.3950449023395777,
+          "repair_frame": 14166
+        },
+        {
+          "frame": 14171,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 63.53401788137853,
+          "ttr_seconds": 0.4412170145660639,
+          "repair_frame": 14186
+        },
+        {
+          "frame": 14191,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 64.09921441227198,
+          "ttr_seconds": 0.4166087079793215,
+          "repair_frame": 14206
+        },
+        {
+          "frame": 14211,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 64.66391918249428,
+          "ttr_seconds": 0.39651764184236526,
+          "repair_frame": 14226
+        }
+      ],
+      "configuration": {
+        "waypoint_threshold_m": 1.0,
+        "speed_excess_mph": 1.0,
+        "speed_excess_kph": 1.60934,
+        "check_interval_frames": 5
+      }
+    },
+    {
+      "simulation_name": "lav_lav",
+      "mttf_seconds": 347.1103809766598,
+      "mttr_seconds": 0.7875000117346644,
+      "total_failures": 323,
+      "total_repairs": 20,
+      "collision_count": 301,
+      "lane_deviation_count": 22,
+      "speed_violation_count": 0,
+      "failures": [
+        {
+          "frame": 661,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 4.000000059604645,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 676
+        },
+        {
+          "frame": 681,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 5.000000074505806,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 696
+        },
+        {
+          "frame": 701,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 6.000000089406967,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 716
+        },
+        {
+          "frame": 721,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 7.000000104308128,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 736
+        },
+        {
+          "frame": 741,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 8.00000011920929,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 756
+        },
+        {
+          "frame": 761,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 9.00000013411045,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 786,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 10.250000152736902,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 791,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 10.500000156462193,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 796,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 10.750000160187483,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 801,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 11.000000163912773,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 806,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 11.250000167638063,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 811,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 11.500000171363354,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 816,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 11.750000175088644,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 821,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 12.000000178813934,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 826,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 12.250000182539225,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 831,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 12.500000186264515,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 836,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 12.750000189989805,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 841,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 13.000000193715096,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 846,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 13.250000197440386,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 851,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 13.500000201165676,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 856,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 13.750000204890966,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 861,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 14.000000208616257,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 866,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 14.250000212341547,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 871,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 14.500000216066837,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 876,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 14.750000219792128,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 881,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 15.000000223517418,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 886,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 15.250000227242708,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 891,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 15.500000230967999,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 896,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 15.750000234693289,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 901,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 16.00000023841858,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 906,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 16.25000024214387,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 911,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 16.50000024586916,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 916,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 16.75000024959445,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 921,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 17.00000025331974,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 926,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 17.25000025704503,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 931,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 17.50000026077032,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 936,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 17.75000026449561,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 941,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 18.0000002682209,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 946,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 18.250000271946192,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 951,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 18.500000275671482,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 956,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 18.750000279396772,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 961,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 19.000000283122063,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 966,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 19.250000286847353,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 971,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 19.500000290572643,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 976,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 19.750000294297934,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 981,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 20.000000298023224,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 986,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 20.250000301748514,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 991,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 20.500000305473804,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 996,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 20.750000309199095,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1001,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 21.000000312924385,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1006,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 21.250000316649675,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1011,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 21.500000320374966,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1016,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 21.750000324100256,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1021,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 22.000000327825546,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1026,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 22.250000331550837,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1031,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 22.500000335276127,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1036,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 22.750000339001417,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1041,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 23.000000342726707,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1046,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 23.250000346451998,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1051,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 23.500000350177288,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1056,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 23.75000035390258,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1061,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 24.00000035762787,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1066,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 24.25000036135316,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1071,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 24.50000036507845,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1076,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 24.75000036880374,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1081,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 25.00000037252903,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1086,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 25.25000037625432,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1091,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 25.50000037997961,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1096,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 25.7500003837049,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1101,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 26.00000038743019,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1106,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 26.25000039115548,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1111,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 26.50000039488077,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1116,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 26.750000398606062,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1121,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 27.000000402331352,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1126,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 27.250000406056643,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1131,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 27.500000409781933,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1136,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 27.750000413507223,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1141,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 28.000000417232513,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1146,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 28.250000420957804,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1151,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 28.500000424683094,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1156,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 28.750000428408384,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1161,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 29.000000432133675,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1166,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 29.250000435858965,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1171,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 29.500000439584255,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1176,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 29.750000443309546,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1181,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 30.000000447034836,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1186,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 30.250000450760126,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1191,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 30.500000454485416,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1196,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 30.750000458210707,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1201,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 31.000000461935997,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1206,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 31.250000465661287,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1211,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 31.500000469386578,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1216,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 31.750000473111868,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1221,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 32.00000047683716,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1226,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 32.25000048056245,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1231,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 32.50000048428774,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1236,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 32.75000048801303,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1241,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 33.00000049173832,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1246,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 33.25000049546361,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1251,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 33.5000004991889,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1256,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 33.75000050291419,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1261,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 34.00000050663948,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1266,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 34.25000051036477,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1271,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 34.50000051409006,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1276,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 34.75000051781535,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1281,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 35.00000052154064,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1286,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 35.25000052526593,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1291,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 35.50000052899122,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1296,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 35.75000053271651,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1301,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 36.0000005364418,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1306,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 36.25000054016709,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1311,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 36.500000543892384,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1316,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 36.750000547617674,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1321,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.000000551342964,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1326,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.250000555068254,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1331,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.500000558793545,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1336,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.750000562518835,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1341,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.000000566244125,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1346,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.250000569969416,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1351,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.500000573694706,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1356,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.750000577419996,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1361,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 39.00000058114529,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1366,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 39.25000058487058,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1371,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 39.50000058859587,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1376,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 39.75000059232116,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1381,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 40.00000059604645,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1386,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 40.25000059977174,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1391,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 40.50000060349703,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1396,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 40.75000060722232,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1401,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 41.00000061094761,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1406,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 41.2500006146729,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1411,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 41.50000061839819,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1416,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 41.75000062212348,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1421,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 42.00000062584877,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1426,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 42.25000062957406,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1431,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 42.50000063329935,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1436,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 42.75000063702464,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1441,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 43.00000064074993,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1446,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 43.25000064447522,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1451,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 43.50000064820051,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1456,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 43.7500006519258,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1461,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 44.00000065565109,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1466,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 44.25000065937638,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1471,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 44.50000066310167,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1476,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 44.75000066682696,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1481,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 45.000000670552254,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1486,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 45.250000674277544,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1491,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 45.500000678002834,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1496,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 45.750000681728125,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1501,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 46.000000685453415,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1506,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 46.250000689178705,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1511,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 46.500000692903996,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1516,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 46.750000696629286,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1521,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 47.000000700354576,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1526,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 47.250000704079866,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1531,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 47.50000070780516,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1536,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 47.75000071153045,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1541,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 48.00000071525574,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1546,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 48.25000071898103,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1551,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 48.50000072270632,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1556,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 48.75000072643161,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1561,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 49.0000007301569,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1566,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 49.25000073388219,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1571,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 49.50000073760748,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1576,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 49.75000074133277,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1581,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 50.00000074505806,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1586,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 50.25000074878335,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1591,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 50.50000075250864,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1596,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 50.75000075623393,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1601,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 51.00000075995922,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1606,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 51.25000076368451,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1611,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 51.5000007674098,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1616,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 51.75000077113509,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1621,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.00000077486038,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1626,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.25000077858567,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1631,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.50000078231096,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1636,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.75000078603625,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1641,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.00000078976154,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1646,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.250000793486834,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1651,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.500000797212124,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1656,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.750000800937414,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1661,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.000000804662704,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1666,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.250000808387995,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1671,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.500000812113285,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1676,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.750000815838575,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1681,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.000000819563866,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1686,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.250000823289156,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1691,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.500000827014446,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1696,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.75000083073974,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1701,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.00000083446503,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1706,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.25000083819032,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1711,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.50000084191561,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1716,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.7500008456409,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1721,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.00000084936619,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1726,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.25000085309148,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1731,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.50000085681677,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1736,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.75000086054206,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1741,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.00000086426735,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1746,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.25000086799264,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1751,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.50000087171793,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1756,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.75000087544322,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1761,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.00000087916851,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1766,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.2500008828938,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1771,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.50000088661909,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 1776,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.75000089034438,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 62377,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 850.7512955991551,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62392
+        },
+        {
+          "frame": 62397,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 851.7512956140563,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62412
+        },
+        {
+          "frame": 62462,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 855.0012956624851,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62477
+        },
+        {
+          "frame": 62492,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 856.5012956848368,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62507
+        },
+        {
+          "frame": 62512,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 857.501295699738,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62527
+        },
+        {
+          "frame": 62542,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 859.0012957220897,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62557
+        },
+        {
+          "frame": 62632,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 863.5012957891449,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62647
+        },
+        {
+          "frame": 62657,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 864.7512958077714,
+          "ttr_seconds": 1.5000000223517418,
+          "repair_frame": 62687
+        },
+        {
+          "frame": 62707,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 867.2512958450243,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62722
+        },
+        {
+          "frame": 62807,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 872.2512959195301,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62822
+        },
+        {
+          "frame": 62832,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 873.5012959381565,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62847
+        },
+        {
+          "frame": 62852,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 874.5012959530577,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62867
+        },
+        {
+          "frame": 62882,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 876.0012959754094,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62897
+        },
+        {
+          "frame": 62932,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 878.5012960126624,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62947
+        },
+        {
+          "frame": 62952,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 879.5012960275635,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 62967
+        },
+        {
+          "frame": 62972,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 880.5012960424647,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63002,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 882.0012960648164,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63007,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 882.2512960685417,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63012,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 882.501296072267,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63017,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 882.7512960759923,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63022,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 883.0012960797176,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63027,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 883.2512960834429,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63032,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 883.5012960871682,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63037,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 883.7512960908934,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63042,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 884.0012960946187,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63047,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 884.251296098344,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63052,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 884.5012961020693,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63057,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 884.7512961057946,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63062,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 885.0012961095199,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63067,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 885.2512961132452,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63072,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 885.5012961169705,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63077,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 885.7512961206958,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63082,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 886.0012961244211,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63087,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 886.2512961281464,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63092,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 886.5012961318716,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63097,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 886.7512961355969,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63102,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 887.0012961393222,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63107,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 887.2512961430475,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63112,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 887.5012961467728,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63117,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 887.7512961504981,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63122,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 888.0012961542234,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63127,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 888.2512961579487,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63132,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 888.501296161674,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63137,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 888.7512961653993,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63142,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 889.0012961691245,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63147,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 889.2512961728498,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63152,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 889.5012961765751,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63157,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 889.7512961803004,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63162,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 890.0012961840257,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63167,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 890.251296187751,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63172,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 890.5012961914763,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63177,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 890.7512961952016,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63182,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 891.0012961989269,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63187,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 891.2512962026522,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63192,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 891.5012962063774,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63197,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 891.7512962101027,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63202,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 892.001296213828,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63207,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 892.2512962175533,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63212,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 892.5012962212786,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63217,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 892.7512962250039,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63222,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 893.0012962287292,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63227,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 893.2512962324545,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63232,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 893.5012962361798,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63237,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 893.7512962399051,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63242,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 894.0012962436303,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63247,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 894.2512962473556,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63252,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 894.5012962510809,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63257,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 894.7512962548062,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63262,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 895.0012962585315,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63267,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 895.2512962622568,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63272,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 895.5012962659821,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63277,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 895.7512962697074,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63282,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 896.0012962734327,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63287,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 896.251296277158,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63292,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 896.5012962808833,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63297,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 896.7512962846085,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63302,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 897.0012962883338,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63307,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 897.2512962920591,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63312,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 897.5012962957844,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63317,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 897.7512962995097,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63322,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 898.001296303235,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63327,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 898.2512963069603,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63332,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 898.5012963106856,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63337,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 898.7512963144109,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63342,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 899.0012963181362,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63347,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 899.2512963218614,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63352,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 899.5012963255867,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63357,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 899.751296329312,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63362,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 900.0012963330373,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63367,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 900.2512963367626,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63372,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 900.5012963404879,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63377,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 900.7512963442132,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63382,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 901.0012963479385,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63387,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 901.2512963516638,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63392,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 901.5012963553891,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63397,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 901.7512963591143,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63402,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 902.0012963628396,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63407,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 902.2512963665649,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63412,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 902.5012963702902,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63417,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 902.7512963740155,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63422,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 903.0012963777408,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63427,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 903.2512963814661,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63432,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 903.5012963851914,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63437,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 903.7512963889167,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63442,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 904.001296392642,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63447,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 904.2512963963673,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63452,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 904.5012964000925,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63457,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 904.7512964038178,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63462,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 905.0012964075431,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63467,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 905.2512964112684,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63472,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 905.5012964149937,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63477,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 905.751296418719,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63482,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 906.0012964224443,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63487,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 906.2512964261696,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63492,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 906.5012964298949,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63497,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 906.7512964336202,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63502,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 907.0012964373454,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 63507,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 907.2512964410707,
+          "ttr_seconds": null,
+          "repair_frame": null
+        }
+      ],
+      "configuration": {
+        "waypoint_threshold_m": 1.0,
+        "speed_excess_mph": 1.0,
+        "speed_excess_kph": 1.60934,
+        "check_interval_frames": 5
+      }
+    },
+    {
+      "simulation_name": "tf_tf",
+      "mttf_seconds": 45.057692979104246,
+      "mttr_seconds": 0.7500000111758709,
+      "total_failures": 52,
+      "total_repairs": 9,
+      "collision_count": 41,
+      "lane_deviation_count": 11,
+      "speed_violation_count": 0,
+      "failures": [
+        {
+          "frame": 86381,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 4.750000070780516,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 86396
+        },
+        {
+          "frame": 86401,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 5.750000085681677,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 86416
+        },
+        {
+          "frame": 86421,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 6.750000100582838,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 86436
+        },
+        {
+          "frame": 86441,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 7.750000115483999,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 86456
+        },
+        {
+          "frame": 86461,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 8.75000013038516,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 86476
+        },
+        {
+          "frame": 86711,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 21.250000316649675,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 86726
+        },
+        {
+          "frame": 86731,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 22.250000331550837,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 86746
+        },
+        {
+          "frame": 86811,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 26.25000039115548,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 86826
+        },
+        {
+          "frame": 86831,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 27.250000406056643,
+          "ttr_seconds": 0.7500000111758709,
+          "repair_frame": 86846
+        },
+        {
+          "frame": 86851,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 28.250000420957804,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87031,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.250000555068254,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87036,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.500000558793545,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87041,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 37.750000562518835,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87046,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.000000566244125,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87051,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.250000569969416,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87056,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.500000573694706,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87061,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 38.750000577419996,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87066,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 39.00000058114529,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87071,
+          "type": "lane_deviation",
+          "is_fatal": false,
+          "ttf_seconds": 39.25000058487058,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87321,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 51.75000077113509,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87326,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.00000077486038,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87331,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.25000077858567,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87336,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.50000078231096,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87341,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 52.75000078603625,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87346,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.00000078976154,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87351,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.250000793486834,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87356,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.500000797212124,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87361,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 53.750000800937414,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87366,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.000000804662704,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87371,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.250000808387995,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87376,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.500000812113285,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87381,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 54.750000815838575,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87386,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.000000819563866,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87391,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.250000823289156,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87396,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.500000827014446,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87401,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 55.75000083073974,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87406,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.00000083446503,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87411,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.25000083819032,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87416,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.50000084191561,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87421,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 56.7500008456409,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87426,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.00000084936619,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87431,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.25000085309148,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87436,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.50000085681677,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87441,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 57.75000086054206,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87446,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.00000086426735,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87451,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.25000086799264,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87456,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.50000087171793,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87461,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 58.75000087544322,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87466,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.00000087916851,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87471,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.2500008828938,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87476,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.50000088661909,
+          "ttr_seconds": null,
+          "repair_frame": null
+        },
+        {
+          "frame": 87481,
+          "type": "collision",
+          "is_fatal": true,
+          "ttf_seconds": 59.75000089034438,
+          "ttr_seconds": null,
+          "repair_frame": null
+        }
+      ],
+      "configuration": {
+        "waypoint_threshold_m": 1.0,
+        "speed_excess_mph": 1.0,
+        "speed_excess_kph": 1.60934,
+        "check_interval_frames": 5
+      }
+    }
+  ],
+  "summary": {
+    "total_runs": 4,
+    "average_mttf_seconds": 118.9138969030661,
+    "average_mttr_seconds": 0.6773270662804997,
+    "total_failures_all_runs": 609,
+    "total_repairs_all_runs": 38
+  }
+}
