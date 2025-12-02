@@ -4,6 +4,6 @@ __version__ = "0.1.0"
 
 from . import carla_runner
 from . import faults
-from . import utils
+from . import carla_utils
 
 __all__ = ['carla_runner', 'faults', 'utils']

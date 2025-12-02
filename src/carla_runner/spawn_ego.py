@@ -3,7 +3,7 @@
 import random
 from typing import Optional
 
-from utils.logging_utils import setup_logger
+from carla_utils.logging_utils import setup_logger
 
 
 class EgoSpawner:

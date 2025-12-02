@@ -4,7 +4,7 @@ from typing import Dict, List, Optional, Any
 import time
 
 from faults.base_fault import BaseFault
-from utils.logging_utils import setup_logger
+from carla_utils.logging_utils import setup_logger
 
 
 class FaultInjector:

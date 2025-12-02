@@ -5,7 +5,7 @@ import time
 from typing import Optional, Dict, Any
 import json
 
-from utils.logging_utils import setup_logger
+from carla_utils.logging_utils import setup_logger
 
 
 class DataRecorder:
