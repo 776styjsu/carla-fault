@@ -1,0 +1,1 @@
+The file carla_mttf_mttr.py takes in the jsonl files from the CARLA runs and calculates failure data. It saves this data to results.json, which is then used in carla_visualizer.py to create the graphs displaying the data.
