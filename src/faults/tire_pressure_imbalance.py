@@ -52,9 +52,8 @@ class TirePressureImbalanceFault(BaseFault):
         self.original_apply_control = None
         self.filtered_steering = 0.0  # for low-pass filter steering delay
 
-    # ----------------------------------------------------------------------
-    # INJECTION
-    # ----------------------------------------------------------------------
+
+
     def inject(self, target: Any) -> None:
         """Inject both physics and control distortions."""
         if self.is_active:
@@ -73,9 +72,8 @@ class TirePressureImbalanceFault(BaseFault):
             f"(severity={self.severity})"
         )
 
-        # ---------------------------
+
         # 1. Apply physics modification
-        # ---------------------------
         physics = target.get_physics_control()
         wheel = physics.wheels[self.wheel_index]
 
@@ -88,9 +86,8 @@ class TirePressureImbalanceFault(BaseFault):
 
         target.apply_physics_control(physics)
 
-        # ---------------------------
+
         # 2. Wrap apply_control to add steering pull + delay
-        # ---------------------------
         if not hasattr(target, "apply_control"):
             self.logger.warning("Target has no apply_control; skipping behavior layer")
             return
@@ -128,9 +125,8 @@ class TirePressureImbalanceFault(BaseFault):
         # Install the wrapper
         target.apply_control = wrapped_apply_control
 
-    # ----------------------------------------------------------------------
-    # REMOVAL
-    # ----------------------------------------------------------------------
+
+
     def remove(self, target: Any) -> None:
         """Restore normal physics and control behavior."""
         if not self.is_active:
@@ -142,18 +138,16 @@ class TirePressureImbalanceFault(BaseFault):
             f"Removing hybrid tire imbalance fault from {self.wheel_name}"
         )
 
-        # ---------------------------
+
         # Restore physics
-        # ---------------------------
         if self.original_friction is not None:
             physics = target.get_physics_control()
             physics.wheels[self.wheel_index].tire_friction = self.original_friction
             target.apply_physics_control(physics)
             self.original_friction = None
 
-        # ---------------------------
+
         # Restore control behavior
-        # ---------------------------
         if self.original_apply_control is not None:
             target.apply_control = self.original_apply_control
             self.original_apply_control = None
@@ -162,13 +156,4 @@ class TirePressureImbalanceFault(BaseFault):
         
         
     def apply_to_image(self, image: np.ndarray) -> np.ndarray:
-        """
-        Tire pressure imbalance does not affect visual perception.
-        
-        Args:
-            image: Input image as numpy array
-            
-        Returns:
-            Unmodified image
-        """
         return image 
