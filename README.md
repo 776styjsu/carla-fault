@@ -17,6 +17,8 @@ This toolkit supports reproducible fault-injection experiments inside CARLA. The
 - `src/faults/` – fault base class plus concrete fault implementations. New faults dropped here are auto-discovered.
 - `configs/` – YAML sensor layouts (e.g., RGB and depth cameras mounted on the ego vehicle).
 - `env/environment.yml` – conda environment spec with CARLA Python API and required Python packages.
+- 'logs' - output data and visualizations of results, organized by fault type (and fault free)
+- 'data-analysis' - scripts for data analysis and visualization
 
 ## Prerequisites
 - CARLA simulator installation (e.g., `/opt/carla-0.9.15`).
